@@ -46,71 +46,52 @@ The project covers:
 
 
 
-```text
-
-Customer Data
-
-&#x20;    |
-
-&#x20;    v
-
-Data Preprocessing
-
-&#x20;    |
-
-&#x20;    v
-
-Feature Transformation
-
-&#x20;    |
-
-&#x20;    v
-
-ML Models
-
-&#x20;    |
-
-&#x20;    +---- Logistic Regression
-
-&#x20;    |
-
-&#x20;    +---- Random Forest
-
-&#x20;    |
-
-&#x20;    +---- Balanced Random Forest
-
-&#x20;    |
-
-&#x20;    +---- XGBoost
-
-&#x20;    |
-
-&#x20;    v
-
-Model Evaluation
-
-&#x20;    |
-
-&#x20;    v
-
-SHAP Explainability
-
-&#x20;    |
-
-&#x20;    v
-
-Saved ML Pipeline
-
-&#x20;    |
-
-&#x20;    v
-
-FastAPI
-
-&#x20;    |
-
-&#x20;    v
-
-Prediction API
+             CUSTOMER DATA
+                   |
+                   v
+           DATA CLEANING
+                   |
+                   v
+                EDA
+       "Understand the data"
+                   |
+                   v
+          PREPROCESSING
+      "Convert data for ML"
+                   |
+                   v
+            TRAIN MODELS
+                   |
+        +----------+----------+
+        |          |          |
+        v          v          v
+   Logistic       RF       XGBoost
+  Regression
+        |          |          |
+        +----------+----------+
+                   |
+                   v
+           MODEL COMPARISON
+                   |
+                   v
+          SELECT / ANALYZE
+                   |
+                   v
+          SHAP EXPLAINABILITY
+          "Why this prediction?"
+                   |
+                   v
+            SAVE PIPELINE
+                   |
+                   v
+              FastAPI
+                   |
+                   v
+            /predict API
+                   |
+                   v
+          CHURN PROBABILITY
+                   |
+                   v
+        PERFORMANCE BENCHMARK
 
